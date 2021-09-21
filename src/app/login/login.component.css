@@ -1,0 +1,11 @@
+.myForm {
+    min-width: 500px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:x-large;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }

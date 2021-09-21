@@ -1,0 +1,19 @@
+
+<div class="backgound">
+  <form class="myForm">
+    <div class="col-md">
+      <img alt="Logo accon" src="../../assets/logo.png" style="max-height: 80px">
+    </div>
+    <hr>
+    <div class="form-group p-2 m-2">
+      <label for="exampleInputEmail1">E-mail</label>
+      <input type="email" class="form-control" [(ngModel)]='email' name="email" aria-describedby="emailHelp"
+        placeholder="Enter email">
+    </div>
+    <div class="form-group p-2 m-2">
+      <label for="exampleInputPassword1">Senha</label>
+      <input type="password" class="form-control" [(ngModel)]='password' name="password" placeholder="Password">
+    </div>
+    <button type="button" class="btn btn-primary mb-3" (click)="authentication(email, password)">Autenticar</button>
+  </form>
+</div>
