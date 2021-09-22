@@ -44,28 +44,9 @@ export class OrdersComponent implements OnInit {
   nextStatus(id: string) {
     this.requestService.nextStatus(id).subscribe(
       data => {
-        this.orders.forEach((order) => {
-          if(order.status[0].name === 'Realizado'){
-            order.status[0].name = 'Confirmado';
-            this.sharingService.setOrders(this.orders)
-            location.reload();
-            return ;
-          }
-          if (order.status[0].name === 'Confirmado'){
-            order.status[0].name = 'Pronto';
-            this.sharingService.setOrders(this.orders)
-            location.reload();
-            return ;
-          }
-          if (order.status[0].name === 'Pronto'){
-            order.status[0].name = 'Finalizado';
-            this.sharingService.setOrders(this.orders)
-            location.reload();
-            return ;
-          }
-        })
-      }
-    )
+        this.sharingService.attStatus(id)
+        location.reload()
+      })
   }
 
 }
