@@ -29,7 +29,7 @@ export class OrdersComponent implements OnInit {
   ordersJson: string;
   confirmedOrders: string;
   orders: Order[] = this.sharingService.getOrders();
-
+  
   openLg(content) {
     this.modalService.open(content, { size: 'lg' });
   }
@@ -38,6 +38,7 @@ export class OrdersComponent implements OnInit {
     this.requestService.getPendingOrders(this.token, this.network).subscribe(
       data => {
         this.sharingService.setOrders(data);
+        console.log(this.orders)
     })
   }
 

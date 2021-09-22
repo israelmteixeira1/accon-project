@@ -107,6 +107,16 @@
                 <div class="col-lg-2"><strong>{{ product.quantity }}</strong></div>
                 <div class="col-lg-8"><strong>{{ product.name }}</strong></div>
                 <div class="col-lg-2"><strong>{{ product.total }}</strong></div><hr>
+                <section *ngIf="product.modifiers">
+                  <div class="row" *ngFor="let modifier of product.modifiers">
+                      <div class="offset-lg-2 col-lg-8">
+                        {{ modifier.quantity }}x {{ modifier.name }}
+                      </div>
+                      <div class="col-lg-2">
+                        {{ modifier.price.actualPrice }}
+                      </div>
+                  </div>
+                </section>
               </div><br>
               <div class="row">
                 <div class="offset-lg-2 col-lg-8 text-left">Subtotal</div>

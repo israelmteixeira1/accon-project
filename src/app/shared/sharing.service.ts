@@ -21,13 +21,10 @@ export class SharingService {
   private newOrders: Order[]
 
   setData(token:string, network:string){
-    this.network = network;
-    this.token = token;
-    
-    this.tokenJson = JSON.stringify(this.token)
+    this.tokenJson = JSON.stringify(token)
     localStorage.setItem('token', this.tokenJson)
 
-    this.networkJson = JSON.stringify(this.network)
+    this.networkJson = JSON.stringify(network)
     localStorage.setItem('network', this.networkJson)
   }
 
